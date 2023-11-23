@@ -1,15 +1,6 @@
-import os
 import pandas as pd
-import matplotlib.pyplot as plt
-import multiprocessing as mp
-from pyasassn.client import SkyPatrolClient
-import io
-import sys
 import time
-import datetime
 import requests
-from typing import Final
-from astropy.time import Time
 import numpy as np
 
 class Atlas(DataSource):
@@ -103,9 +94,7 @@ class Atlas(DataSource):
                             print("Waiting for job to start. Checking again in 10 seconds...")
                         time.sleep(10)
                     else:
-                        print(f'ERROR {resp.status_code}')
-                        print(resp.json())
-                        sys.exit()
+                        raise RuntimeError(f'ERROR {resp.json()}')
 
         with requests.Session() as s:
             print(result_url)
