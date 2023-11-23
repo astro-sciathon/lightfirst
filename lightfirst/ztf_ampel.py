@@ -2,7 +2,7 @@ import pandas as pd
 import requests
 from typing import Final
 
-from .session import DataSource
+from lightfirst.data_source import DataSource
 
 
 class ZTFQuery(DataSource):

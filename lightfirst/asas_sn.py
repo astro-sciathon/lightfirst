@@ -1,4 +1,4 @@
-from .session import DataSource
+from lightfirst.data_source import DataSource
 from pyasassn.client import SkyPatrolClient
 import pandas as pd
 
