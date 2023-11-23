@@ -135,3 +135,20 @@ class ColibriSession:
         plt.draw()
         plt.show()
 
+
+if __name__ == "__main__":
+    # Define data sources
+    data_sources = {
+        'atlas': {
+           'username': "USERNAME",
+           'password': "PASSWORD"
+           },
+        'ztf': "TOKEN-GOES-HERE",
+        'asas-sn': None,
+    }
+    # Create session
+    session = ColibriSession(data_sources)
+    # Pull light curves
+    lcs = session.query_all(ra=244.00092, dec=22.26803, date_min="2018-06-04", date_max="2018-06-29")
+    session.plot_lcs(lcs, title="SN 2018cow")
+
