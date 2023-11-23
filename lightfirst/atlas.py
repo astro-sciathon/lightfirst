@@ -2,6 +2,7 @@ import pandas as pd
 import time
 import requests
 import numpy as np
+from lightfirst.data_source import DataSource
 
 class Atlas(DataSource):
     """

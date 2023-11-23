@@ -1,0 +1,7 @@
+# Configuration file for data sources ingested by ColibriSession testing
+asas-sn: null
+atlas: 
+  username: "USERNAMEHERE",
+  password: "PASSWORDHERE"
+ztf: "TOKENGOESHERE"
+
