@@ -1,3 +1,4 @@
+from .session import DataSource
 from pyasassn.client import SkyPatrolClient
 import pandas as pd
 
