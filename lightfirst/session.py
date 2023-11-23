@@ -5,6 +5,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 from astropy.time import Time
 import yaml
+import argparse
 
 class ColibriSession:
     """
