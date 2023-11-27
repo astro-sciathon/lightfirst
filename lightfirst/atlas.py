@@ -78,9 +78,9 @@ class Atlas(DataSource):
         while not result_url:
                 with requests.Session() as s:
 
-                    if result_url is None:
-                        return pd.DataFrame(columns=['obj_id','mjd', 'mag', 'mag_err', 'filter',
-                                     'limit'])
+                    #if result_url is None:
+                        #return pd.DataFrame(columns=['obj_id','mjd', 'mag', 'mag_err', 'filter',
+                                     #'limit'])
 
                     resp = s.get(task_url, headers=headers)
 
